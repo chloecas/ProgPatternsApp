@@ -1,22 +1,22 @@
 package app.controller;
 
+import javafx.scene.control.TextField;
+import javafx.event.ActionEvent;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
 import app.model.LoginService;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 
 public class LoginController {
 
-	 @FXML
-	    private Pane loginPage;
+	@FXML
+	private Pane loginPage;
 
 	@FXML
 	private TextField username,fName,lName,sUsername,age,email;
@@ -31,7 +31,7 @@ public class LoginController {
 
 	public void initialize() {
 		try {
-			Connection con = DriverManager.getConnection("jdbc:sqlite:ProgPatternsApp-GUI/MovieReviewApp.db");
+			Connection con = DriverManager.getConnection("jdbc:sqlite:MovieReviewApp.db");
 			login = new LoginService(con);
 			System.out.println("Connected to database successfully");
 			Statement st2 = con.createStatement();
@@ -74,7 +74,7 @@ public class LoginController {
 	}
 
 	@FXML
-    private void handleClick(ActionEvent event) {
+    public void handleClick(ActionEvent event) {
         System.out.println("Account clicked!");
         loginPage.setVisible(true);
 
