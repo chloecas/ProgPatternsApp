@@ -70,6 +70,6 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "app.model.Movie id: " + movieId + ", title: " + title + ", description: " + description +  ", releaseYear: " + releaseYear + ", avgRating: " + avgRating + ", genre: " + genre +  ", directorId: " + directorId;
+        return "app.model.test.Movie id: " + movieId + ", title: " + title + ", description: " + description +  ", releaseYear: " + releaseYear + ", avgRating: " + avgRating + ", genre: " + genre +  ", directorId: " + directorId;
     }
 }

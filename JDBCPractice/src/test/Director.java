@@ -1,3 +1,5 @@
+package test;
+
 public class Director {
     private String directorId;
     private String name;
@@ -41,6 +43,6 @@ public class Director {
 
     @Override
     public String toString() {
-        return "Director id: " + directorId + ", name: " + name + ", birthDate: " + birthDate + ", bio: " + bio;
+        return "test.Director id: " + directorId + ", name: " + name + ", birthDate: " + birthDate + ", bio: " + bio;
     }
 }

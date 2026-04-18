@@ -81,6 +81,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "app.model.User id: " + userId + ", username: " + username + ", password: " + password + ", first name: " + firstName;
+        return "app.model.test.User id: " + userId + ", username: " + username + ", password: " + password + ", first name: " + firstName;
     }
 }

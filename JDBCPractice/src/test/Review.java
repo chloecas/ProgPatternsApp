@@ -1,3 +1,5 @@
+package test;
+
 public class Review {
     private String reviewId;
     private double rating;
@@ -59,6 +61,6 @@ public class Review {
 
     @Override
     public String toString() {
-        return "Review id: " + reviewId + ", rating: " + rating + ", comment: " + comment + ", creationDate: " + creationDate + ", userId: " + userId + ", movieId: " + movieId;
+        return "test.Review id: " + reviewId + ", rating: " + rating + ", comment: " + comment + ", creationDate: " + creationDate + ", userId: " + userId + ", movieId: " + movieId;
     }
 }

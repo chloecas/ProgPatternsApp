@@ -61,6 +61,6 @@ public class Review {
 
     @Override
     public String toString() {
-        return "app.model.Review id: " + reviewId + ", rating: " + rating + ", comment: " + comment + ", creationDate: " + creationDate + ", userId: " + userId + ", movieId: " + movieId;
+        return "app.model.test.Review id: " + reviewId + ", rating: " + rating + ", comment: " + comment + ", creationDate: " + creationDate + ", userId: " + userId + ", movieId: " + movieId;
     }
 }

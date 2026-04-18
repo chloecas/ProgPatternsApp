@@ -43,6 +43,6 @@ public class Director {
 
     @Override
     public String toString() {
-        return "app.model.Director id: " + directorId + ", name: " + name + ", birthDate: " + birthDate + ", bio: " + bio;
+        return "app.model.test.Director id: " + directorId + ", name: " + name + ", birthDate: " + birthDate + ", bio: " + bio;
     }
 }

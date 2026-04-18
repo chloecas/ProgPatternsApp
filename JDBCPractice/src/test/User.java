@@ -1,3 +1,5 @@
+package test;
+
 import java.util.Date;
 
 public class User {
@@ -79,6 +81,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "User id: " + userId + ", username: " + username + ", password: " + password + ", first name: " + firstName;
+        return "test.User id: " + userId + ", username: " + username + ", password: " + password + ", first name: " + firstName;
     }
 }

@@ -1,3 +1,5 @@
+package test;
+
 public class Movie {
     private int movieId;
     private String title;
@@ -68,6 +70,6 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "Movie id: " + movieId + ", title: " + title + ", description: " + description +  ", releaseYear: " + releaseYear + ", avgRating: " + avgRating + ", genre: " + genre +  ", directorId: " + directorId;
+        return "test.Movie id: " + movieId + ", title: " + title + ", description: " + description +  ", releaseYear: " + releaseYear + ", avgRating: " + avgRating + ", genre: " + genre +  ", directorId: " + directorId;
     }
 }
