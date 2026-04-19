@@ -5,7 +5,7 @@ public class Rating {
 	private int movieId;
 	private int userId;
 	private double rating;
-	
+
 	public Rating(int ratingId, int movieId, int userId, double rating) {
 		this.ratingId = ratingId;
 		this.movieId = movieId;
