@@ -7,9 +7,10 @@ public class Movie {
     private int releaseYear;
     private double avgRating;
     private String genre;
-    private String directorId;
+    private int directorId;
+    private String imagePath;
 
-    public Movie(int movieId, String title, String description, int releaseYear, double avgRating, String genre,  String directorId) {
+    public Movie(int movieId, String title, String description, int releaseYear, double avgRating, String genre,  int directorId, String imagePath) {
         this.movieId = movieId;
         this.title = title;
         this.description = description;
@@ -17,6 +18,7 @@ public class Movie {
         this.avgRating = avgRating;
         this.genre = genre;
         this.directorId = directorId;
+        this.imagePath = imagePath;
     }
 
     public int getMovieId() {
@@ -61,12 +63,15 @@ public class Movie {
         this.genre = genre;
     }
 
-    public String getDirectorId() {
+    public int getDirectorId() {
         return directorId;
     }
-    public void setDirectorId(String directorId) {
+    public void setDirectorId(int directorId) {
         this.directorId = directorId;
     }
+
+    public String getImagePath() { return imagePath;}
+    public void setImagePath(String path) { this.imagePath = path;}
 
     @Override
     public String toString() {
