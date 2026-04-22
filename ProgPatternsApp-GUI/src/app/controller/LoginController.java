@@ -3,10 +3,6 @@ package app.controller;
 import app.DAO.UserDAO;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 import app.model.LoginService;
 import javafx.fxml.FXML;
