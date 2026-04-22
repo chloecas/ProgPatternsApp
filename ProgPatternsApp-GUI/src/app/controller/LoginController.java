@@ -1,11 +1,8 @@
 package app.controller;
 
+import app.DAO.UserDAO;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 import app.model.LoginService;
 import javafx.fxml.FXML;
@@ -31,12 +28,8 @@ public class LoginController {
 
 	public void initialize() {
 		try {
-			Connection con = DriverManager.getConnection("jdbc:sqlite:MovieReviewApp.db");
-			login = new LoginService(con);
-			System.out.println("Connected to database successfully");
-			Statement st2 = con.createStatement();
-			ResultSet res2 = st2.executeQuery("select * from Users");
-			System.out.println(res2);
+			UserDAO userDAO = new UserDAO();
+			login = new LoginService(userDAO);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -77,7 +70,5 @@ public class LoginController {
     public void handleClick(ActionEvent event) {
         System.out.println("Account clicked!");
         loginPage.setVisible(true);
-
     }
-
 }
