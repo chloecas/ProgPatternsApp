@@ -70,4 +70,15 @@ public class MovieDAO {
         }
         return filteredMovies;
     }
+
+    public List<Movie> getTopMovies() {
+       return getMovies().stream()
+               .sorted(Comparator.comparing(Movie::getAvgRating).reversed())
+               .limit(10)
+               .toList();
+    }
+
+    public Movie getMovieById(int movieID){
+        return getMovies().get(movieID);
+    }
 }

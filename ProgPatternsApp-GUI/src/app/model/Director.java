@@ -1,22 +1,22 @@
 package app.model;
 
 public class Director {
-    private String directorId;
+    private int directorId;
     private String name;
     private String birthDate;
     private String bio;
 
-    public Director(String directorId, String name, String birthDate, String bio) {
+    public Director(int directorId, String name, String birthDate, String bio) {
         this.directorId = directorId;
         this.name = name;
         this.birthDate = birthDate;
         this.bio = bio;
     }
 
-    public String getDirectorId() {
+    public int getDirectorId() {
         return directorId;
     }
-    public void setDirectorId(String directorId) {
+    public void setDirectorId(int directorId) {
         this.directorId = directorId;
     }
 
@@ -43,6 +43,6 @@ public class Director {
 
     @Override
     public String toString() {
-        return "app.model.test.Director id: " + directorId + ", name: " + name + ", birthDate: " + birthDate + ", bio: " + bio;
+        return name + " - Born on " + birthDate + "\n" + bio;
     }
 }

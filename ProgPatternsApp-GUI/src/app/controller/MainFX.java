@@ -9,9 +9,9 @@ import javafx.stage.Stage;
 public class MainFX extends Application {
     @Override
 	public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/app/view/Layout.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/app/view/HomeWindow.fxml"));
         Scene scene = new Scene(loader.load());
-        stage.setTitle("test.Movie App");
+        stage.setTitle("Letterboxd");
         stage.setScene(scene);
         stage.show();
     }

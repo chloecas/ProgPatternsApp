@@ -1,14 +1,14 @@
 package app.model;
 
 public class Review {
-    private String reviewId;
+    private int reviewId;
     private double rating;
     private String comment;
     private String creationDate;
-    private String userId;
-    private String movieId;
+    private int userId;
+    private int movieId;
 
-    public Review(String reviewId, double rating, String comment, String creationDate, String userId, String movieId) {
+    public Review(int reviewId, double rating, String comment, String creationDate, int userId, int movieId) {
         this.reviewId = reviewId;
         this.rating = rating;
         this.comment = comment;
@@ -17,10 +17,10 @@ public class Review {
         this.movieId = movieId;
     }
 
-    public String getReviewId() {
+    public int getReviewId() {
         return reviewId;
     }
-    public void setReviewId(String reviewId) {
+    public void setReviewId(int reviewId) {
         this.reviewId = reviewId;
     }
 
@@ -45,17 +45,17 @@ public class Review {
         this.creationDate = creationDate;
     }
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
     }
-    public void setUserId(String userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
-    public String getMovieId() {
+    public int getMovieId() {
         return movieId;
     }
-    public void setMovieId(String movieId) {
+    public void setMovieId(int movieId) {
         this.movieId = movieId;
     }
 

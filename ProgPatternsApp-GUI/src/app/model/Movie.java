@@ -1,5 +1,7 @@
 package app.model;
 
+import java.util.Comparator;
+
 public class Movie {
     private int movieId;
     private String title;
@@ -76,5 +78,26 @@ public class Movie {
     @Override
     public String toString() {
         return "app.model.test.Movie id: " + movieId + ", title: " + title + ", description: " + description +  ", releaseYear: " + releaseYear + ", avgRating: " + avgRating + ", genre: " + genre +  ", directorId: " + directorId;
+    }
+
+    public static class RatingComparator implements Comparator<Movie> {
+
+        @Override
+        public int compare(Movie o1, Movie o2) {
+            return Double.compare(o1.getAvgRating(), o2.getAvgRating());
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            return false;
+        }
+    }
+
+    public static class TitleComparator implements Comparator<Movie>{
+
+        @Override
+        public int compare(Movie o1, Movie o2) {
+            return o1.getTitle().compareTo(o2.getTitle());
+        }
     }
 }

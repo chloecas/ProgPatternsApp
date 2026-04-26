@@ -66,9 +66,4 @@ public class LoginController {
 		}
 	}
 
-	@FXML
-    public void handleClick(ActionEvent event) {
-        System.out.println("Account clicked!");
-        loginPage.setVisible(true);
-    }
 }

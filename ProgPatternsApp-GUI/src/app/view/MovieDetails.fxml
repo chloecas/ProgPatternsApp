@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="597.0" prefWidth="666.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MovieDetailsController">
+   <children>
+      <ImageView fx:id="moviePoster" fitHeight="320.0" fitWidth="249.0" layoutX="30.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="movieTitle" layoutX="237.0" layoutY="26.0" text="Movie Title" textFill="#940a0a">
+         <font>
+            <Font name="Georgia Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextFlow fx:id="textContainer" layoutX="306.0" layoutY="87.0" lineSpacing="0.5" prefHeight="97.0" prefWidth="340.0" style="-fx-border-color: white;" textAlignment="CENTER">
+         <children>
+            <TextArea fx:id="movieDescription" editable="false" prefHeight="97.0" prefWidth="340.0" style="-fx-font-family: Georgia;" wrapText="true" />
+         </children>
+      </TextFlow>
+      <TextFlow fx:id="directorInfo" layoutX="306.0" layoutY="226.0" prefHeight="156.0" prefWidth="340.0" style="-fx-border-color: white;" textAlignment="CENTER">
+         <children>
+            <TextArea fx:id="directorBio" editable="false" prefHeight="155.0" prefWidth="340.0" style="-fx-font-family: Georgia;" wrapText="true" />
+         </children>
+      </TextFlow>
+      <Label layoutX="306.0" layoutY="204.0" prefHeight="16.0" prefWidth="94.0" text="Director Bio">
+         <font>
+            <Font name="Georgia Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="414.0" lineSpacing="0.5" text="User Ratings" textFill="#0d0d0d" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="ratingsListView" layoutX="29.0" layoutY="434.0" prefHeight="145.0" prefWidth="250.0" style="-fx-background-color: #FCC6BB;" />
+      <Label layoutX="436.0" layoutY="414.0" text="User Reviews" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="reviewsListView" layoutX="306.0" layoutY="434.0" prefHeight="146.0" prefWidth="340.0" style="-fx-background-color: #FCC6BB;" />
+      <Separator layoutX="276.0" layoutY="87.0" orientation="VERTICAL" prefHeight="320.0" prefWidth="4.0" style="-fx-background-color: #FCC6BB; -fx-border-color: #FCC6BB;" />
+   </children>
+</AnchorPane>
