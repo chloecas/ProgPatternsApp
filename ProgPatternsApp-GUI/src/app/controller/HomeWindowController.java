@@ -75,18 +75,22 @@ public class HomeWindowController {
     }
 
     @FXML
-    public void nextMovie() {
-        if(currentIndex < topMovies.size() -1){
+    public void nextMovie() throws IOException {
+        if(currentIndex + 3 < topMovies.size()){
             currentIndex++;
-            controller.setMovie(topMovies.get(currentIndex));
+            loadMovie(topMoviePane, currentIndex);
+            loadMovie(topMoviePane2, currentIndex + 1);
+            loadMovie(topMoviePane3, currentIndex + 2);
         }
     }
 
     @FXML
-    public void prevMovie() {
+    public void prevMovie() throws IOException {
         if(currentIndex > 0){
             currentIndex--;
-            controller.setMovie(topMovies.get(currentIndex));
+            loadMovie(topMoviePane, currentIndex);
+            loadMovie(topMoviePane2, currentIndex + 1);
+            loadMovie(topMoviePane3, currentIndex + 2);
         }
     }
 
