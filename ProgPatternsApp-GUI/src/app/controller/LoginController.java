@@ -1,6 +1,7 @@
 package app.controller;
 
 import app.DAO.UserDAO;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
 
@@ -13,7 +14,7 @@ import javafx.scene.layout.Pane;
 public class LoginController {
 
 	@FXML
-	private Pane loginPage;
+	private Pane signInPane;
 
 	@FXML
 	private TextField username,fName,lName,sUsername,age,email;
@@ -22,7 +23,10 @@ public class LoginController {
 	private PasswordField password,sPassword;
 
 	@FXML
-	private Button submit;
+	private Label signInText;
+
+	@FXML
+	private Button signIn;
 
 	private LoginService login;
 
@@ -61,9 +65,19 @@ public class LoginController {
 		try {
 			login.createAccount(firstName,lastName,Age,Email,sUser,sPass);
 			System.out.println("Sign in successful!");
+			signInPane.setVisible(false);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
+	@FXML
+	private void signInPane() {
+		signInPane.setVisible(true);
+	}
+
+	@FXML
+	private void goBackLogin() {
+		signInPane.setVisible(false);
+	}
 }
