@@ -21,7 +21,7 @@ public class HomeWindowController {
     Button acountButton;
 
     @FXML
-    Pane topMoviePane;
+    Pane topMoviePane, topMoviePane2, topMoviePane3;
 
     @FXML
     Button nextButton;
@@ -44,12 +44,19 @@ public class HomeWindowController {
     public void initialize() throws IOException {
         topMovies = movieDAO.getTopMovies();
 
+        loadMovie(topMoviePane,0);
+        loadMovie(topMoviePane2,1);
+        loadMovie(topMoviePane3,2);
+    }
+
+    @FXML
+    private void loadMovie(Pane pane, int index) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/app/view/MovieCard.fxml"));
         Parent parent = loader.load();
         this.controller = loader.getController();
-        this.controller.setMovie(topMovies.getFirst());
+        this.controller.setMovie(topMovies.get(index));
 
-        topMoviePane.getChildren().add(parent);
+        pane.getChildren().add(parent);
     }
 
     @FXML

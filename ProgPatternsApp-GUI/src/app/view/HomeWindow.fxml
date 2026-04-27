@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="577.0" prefWidth="785.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.HomeWindowController">
+<AnchorPane prefHeight="577.0" prefWidth="668.0" style="-fx-background-color: #7A6B9D;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.HomeWindowController">
    <children>
-      <MenuBar layoutY="-3.0" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-color: red;">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c2a3e" height="53.0" layoutX="-2.0" layoutY="-2.0" stroke="TRANSPARENT" strokeType="INSIDE" width="786.0" />
+      <MenuBar layoutX="8.0" layoutY="7.0" prefHeight="0.0" prefWidth="166.0" style="-fx-background-color: #2C2A3E; -fx-text-fill: #EDE7F6;">
         <menus>
-          <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
+          <Menu fx:id="fileMenu" mnemonicParsing="false" style="-fx-text-fill: #EDE7F6;" text="File">
             <items>
               <MenuItem fx:id="closeItem" mnemonicParsing="false" onAction="#close" text="Close" />
             </items>
@@ -36,38 +42,36 @@
             <Cursor fx:constant="HAND" />
          </cursor>
          <effect>
-            <DropShadow height="29.79" radius="14.395" width="29.79">
-               <color>
-                  <Color red="0.8552631735801697" green="0.114826999604702" blue="0.114826999604702" />
-               </color>
-            </DropShadow>
+            <Blend />
          </effect>
       </MenuBar>
-      <Label layoutX="323.0" layoutY="10.0" prefHeight="30.0" prefWidth="166.0" text="Letterboxd" textFill="#ae1515">
+      <Label layoutX="323.0" layoutY="10.0" prefHeight="30.0" prefWidth="166.0" text="Letterboxd" textFill="#ede7f6">
          <font>
             <Font name="Georgia Bold Italic" size="26.0" />
          </font>
       </Label>
-      <Pane fx:id="topMoviePane" layoutX="426.0" layoutY="117.0" prefHeight="384.0" prefWidth="309.0" style="-fx-border-color: red; -fx-background-color: white;" />
-      <Button fx:id="accountButton" layoutX="682.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleLogin" text="My Account">
+      <Pane fx:id="topMoviePane" layoutX="68.0" layoutY="162.0" prefHeight="248.0" prefWidth="166.0" style="-fx-border-color: #111111; -fx-background-color: #aaaaaa;" />
+      <Button fx:id="accountButton" layoutX="684.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleLogin" style="-fx-background-color: #2C2A3E;" text="My Account" textFill="#ede7f6">
          <font>
             <Font name="Georgia" size="12.0" />
          </font>
       </Button>
-      <Label layoutX="498.0" layoutY="91.0" text="Top 10 Highly Rated Films">
+      <Label layoutX="24.0" layoutY="129.0" text="Top 10 Highly Rated Films" textFill="WHITE">
          <font>
             <Font name="Georgia" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="prevButton" layoutX="509.0" layoutY="533.0" mnemonicParsing="false" onAction="#prevMovie" text="&lt;">
+      <Button fx:id="prevButton" layoutX="24.0" layoutY="442.0" mnemonicParsing="false" onAction="#prevMovie" text="&lt;">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="nextButton" layoutX="623.0" layoutY="533.0" mnemonicParsing="false" onAction="#nextMovie" text="&gt;">
+      <Button fx:id="nextButton" layoutX="734.0" layoutY="442.0" mnemonicParsing="false" onAction="#nextMovie" text="&gt;">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
+      <Pane fx:id="topMoviePane2" layoutX="313.0" layoutY="162.0" prefHeight="248.0" prefWidth="166.0" style="-fx-border-color: #111111; -fx-background-color: #aaaaaa;" />
+      <Pane fx:id="topMoviePane3" layoutX="548.0" layoutY="162.0" prefHeight="248.0" prefWidth="166.0" style="-fx-border-color: #111111; -fx-background-color: #aaaaaa;" />
    </children>
 </AnchorPane>

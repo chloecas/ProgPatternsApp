@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="406.0" prefWidth="320.0" spacing="8" style="-fx-padding: 10; -fx-background-color: pink; -fx-background-radius: 10; -fx-border-color: red;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MovieCardController">
+<VBox prefHeight="255.0" prefWidth="172.0" spacing="8" style="-fx-padding: 10; -fx-background-color: #EDE7F6; -fx-background-radius: 10; -fx-border-color: #2C2A3E;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MovieCardController">
 
-    <ImageView fx:id="poster" fitHeight="334.0" fitWidth="297.0" style="visibility: true;" />
-    <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="283.0" style="-fx-font-weight: bold; -fx-text-alignment: center;" text="Title" textAlignment="CENTER">
+    <ImageView fx:id="poster" fitHeight="160.0" fitWidth="147.0" style="visibility: true;" />
+    <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="165.0" style="-fx-font-weight: bold; -fx-text-alignment: center;" text="Title" textAlignment="CENTER">
       <font>
          <Font size="14.0" />
       </font></Label>
-    <Label fx:id="ratingLabel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="280.0" text="Rating" textAlignment="CENTER">
+    <Label fx:id="ratingLabel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="155.0" text="Rating" textAlignment="CENTER">
       <font>
          <Font name="Georgia" size="12.0" />
       </font></Label>
