@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="548.0" prefWidth="874.0" style="-fx-background-color: #7A6B9D;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.UserPortalController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c2a3e" height="52.0" stroke="BLACK" strokeType="INSIDE" width="874.0" />
+      <Pane fx:id="moviePane" layoutX="578.0" layoutY="144.0" prefHeight="345.0" prefWidth="255.0" style="-fx-border-color: #111111; -fx-background-color: #aaaaaa;" />
+      <Label layoutX="638.0" layoutY="128.0" text="Your Top 3 Movies" textFill="WHITE">
+         <font>
+            <Font name="Georgia Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Slider fx:id="movieScroll" blockIncrement="1.0" layoutX="647.0" layoutY="490.0" max="3.0" min="1.0" showTickLabels="true" value="1.0" />
+      <Label layoutX="364.0" layoutY="75.0" text="Account Details">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="userReviewsList" layoutX="40.0" layoutY="326.0" prefHeight="130.0" prefWidth="292.0" />
+      <Label layoutX="40.0" layoutY="308.0" text="Recent Activity" underline="true" />
+      <Button fx:id="manageAccountButton" layoutX="98.0" layoutY="73.0" mnemonicParsing="false" onAction="#editUser" text="Manage Account" />
+      <ListView fx:id="userDetailsList" layoutX="40.0" layoutY="152.0" prefHeight="118.0" prefWidth="282.0" />
+      <Label layoutX="40.0" layoutY="135.0" text="Personal Information" underline="true" />
+      <Label layoutX="379.0" layoutY="194.0" text="Total Movies Watched" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="movieCount" layoutX="423.0" layoutY="250.0" text="Label" />
+      <Label layoutX="363.0" layoutY="14.0" text="Letterboxd" textFill="#ede7f6">
+         <font>
+            <Font name="Georgia Bold Italic" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

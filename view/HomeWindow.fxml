@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="577.0" prefWidth="668.0" style="-fx-background-color: #7A6B9D;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.HomeWindowController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c2a3e" height="53.0" layoutX="-2.0" layoutY="-2.0" stroke="TRANSPARENT" strokeType="INSIDE" width="786.0" />
+      <MenuBar layoutX="8.0" layoutY="7.0" prefHeight="0.0" prefWidth="166.0" style="-fx-background-color: #2C2A3E; -fx-text-fill: #ffffff;">
+        <menus>
+          <Menu fx:id="fileMenu" mnemonicParsing="false" style="-fx-text-fill: #EDE7F6;" text="%main.menufile">
+            <items>
+              <MenuItem fx:id="closeItem" mnemonicParsing="false" onAction="#close" text="%main.menuclose" />
+            </items>
+          </Menu>
+          <Menu fx:id="languageMenu" mnemonicParsing="false" style="-fx-text-fill: #EDE7F6;" text="%main.menulanguages">
+            <items>
+                  <MenuItem fx:id="frenchLocale" mnemonicParsing="false" onAction="#changeLocale" text="%main.menuItemfrench" userData="fr_CA" />
+              <MenuItem fx:id="englishLocale" mnemonicParsing="false" onAction="#changeLocale" text="%main.menuItemenglish" userData="en_CA" />
+            </items>
+          </Menu>
+          <Menu fx:id="helpMenu" mnemonicParsing="false" style="-fx-text-fill: #EDE7F6;" text="%main.menuhelp">
+            <items>
+              <MenuItem fx:id="aboutItem" mnemonicParsing="false" onAction="#about" text="%main.menuitemabout" />
+            </items>
+          </Menu>
+        </menus>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Blend />
+         </effect>
+      </MenuBar>
+      <Label layoutX="323.0" layoutY="10.0" prefHeight="30.0" prefWidth="166.0" text="Letterboxd" textFill="#ede7f6">
+         <font>
+            <Font name="Georgia Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <Pane fx:id="topMoviePane" layoutX="68.0" layoutY="141.0" prefHeight="248.0" prefWidth="166.0" style="-fx-border-color: #111111; -fx-background-color: #aaaaaa;" />
+      <Pane fx:id="topMoviePane2" layoutX="313.0" layoutY="141.0" prefHeight="248.0" prefWidth="166.0" style="-fx-border-color: #111111; -fx-background-color: #aaaaaa;" />
+      <Pane fx:id="topMoviePane3" layoutX="548.0" layoutY="141.0" prefHeight="248.0" prefWidth="166.0" style="-fx-border-color: #111111; -fx-background-color: #aaaaaa;" />
+      <Button fx:id="accountButton" layoutX="684.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleLogin" style="-fx-background-color: #2C2A3E;" text="%main.button" textFill="#ede7f6">
+         <font>
+            <Font name="Georgia" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="24.0" layoutY="108.0" text="%main.label" textFill="#ffffff">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="prevButton" layoutX="24.0" layoutY="421.0" mnemonicParsing="false" onAction="#prevMovie" text="&lt;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="nextButton" layoutX="734.0" layoutY="421.0" mnemonicParsing="false" onAction="#nextMovie" text="&gt;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

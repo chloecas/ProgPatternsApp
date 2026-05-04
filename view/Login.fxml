@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="345.0" prefWidth="588.0" style="-fx-background-color: #7A6B9D;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.LoginController">
+   <Label layoutX="106.0" layoutY="113.0" prefHeight="18.0" prefWidth="149.0" text="%login.user" textFill="#ede7f6" />
+   <TextField fx:id="username" layoutX="253.0" layoutY="108.0" />
+   <Label layoutX="107.0" layoutY="146.0" prefHeight="18.0" prefWidth="160.0" text="%login.pass" textFill="#ede7f6" />
+   <PasswordField fx:id="password" layoutX="253.0" layoutY="142.0" />
+   <Button fx:id="enter" layoutX="274.0" layoutY="184.0" mnemonicParsing="false" onAction="#loginFunction" text="%login.button" textAlignment="CENTER" />
+   <Label alignment="CENTER" layoutX="123.0" layoutY="35.0" prefHeight="50.0" prefWidth="354.0" text="%login.title" textFill="#ede7f6">
+      <font>
+         <Font name="Georgia" size="35.0" />
+      </font>
+   </Label>
+   <Label fx:id="signInText" alignment="CENTER" layoutX="163.0" layoutY="220.0" onMouseClicked="#signInPane" prefHeight="18.0" prefWidth="213.0" text="%login.link" textFill="#2c2a3e">
+      <cursor>
+         <Cursor fx:constant="OPEN_HAND" />
+      </cursor>
+   </Label>
+   <Pane fx:id="signInPane" layoutX="3.0" layoutY="7.0" prefHeight="338.0" prefWidth="588.0" style="-fx-background-color: #7A6B9D;" visible="false">
+      <children>
+         <Label layoutX="220.0" layoutY="27.0" prefHeight="34.0" prefWidth="149.0" text="%create.title" textFill="#ede7f6">
+            <font>
+               <Font name="Arial" size="16.0" />
+            </font>
+         </Label>
+         <Label layoutX="55.0" layoutY="91.0" text="%create.fname" textFill="#ede7f6" />
+         <TextField fx:id="fName" layoutX="122.0" layoutY="87.0" />
+         <Label layoutX="306.0" layoutY="91.0" text="%create.lname" textFill="#ede7f6" />
+         <TextField fx:id="lName" layoutX="367.0" layoutY="87.0" />
+         <Label layoutX="307.0" layoutY="134.0" prefHeight="17.0" prefWidth="35.0" text="%create.age" textAlignment="RIGHT" textFill="#ede7f6" />
+         <TextField fx:id="age" layoutX="341.0" layoutY="130.0" prefHeight="25.0" prefWidth="68.0" />
+         <Label layoutX="56.0" layoutY="168.0" prefHeight="17.0" prefWidth="68.0" text="%create.user" textFill="#ede7f6" />
+         <TextField fx:id="sUsername" layoutX="120.0" layoutY="164.0" prefHeight="25.0" prefWidth="177.0" />
+         <Label layoutX="315.0" layoutY="168.0" prefHeight="17.0" prefWidth="60.0" text="%create.pass" textFill="#ede7f6" />
+         <Button fx:id="signIn" layoutX="275.0" layoutY="216.0" mnemonicParsing="false" onAction="#signInFunction" text="%create.button" />
+         <Label layoutX="55.0" layoutY="134.0" prefHeight="17.0" prefWidth="43.0" text="%create.email" textFill="#ede7f6" />
+         <TextField fx:id="email" layoutX="94.0" layoutY="130.0" prefHeight="25.0" prefWidth="177.0" />
+         <PasswordField fx:id="sPassword" layoutX="375.0" layoutY="164.0" prefHeight="25.0" prefWidth="177.0" />
+         <Label fx:id="back" layoutX="14.0" layoutY="6.0" onMouseClicked="#goBackLogin" text="%create.back" textFill="#2c2a3e">
+            <cursor>
+               <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+         </Label>
+      </children>
+   </Pane>
+</AnchorPane>
