@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="383.0" prefWidth="386.0" style="-fx-background-color: #2c2a3e;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.ActionMenuController">
+   <children>
+      <Button fx:id="watchButton" layoutX="69.0" layoutY="37.0" mnemonicParsing="false" onAction="#addToJournal" text="Watch" />
+      <Button fx:id="watchListButton" layoutX="257.0" layoutY="37.0" mnemonicParsing="false" onAction="#addWatchList" text="Watchlist" />
+      <Pane layoutY="86.0" prefHeight="86.0" prefWidth="386.0" style="-fx-background-color: #7A6B9D;">
+         <children>
+            <Label layoutX="175.0" layoutY="14.0" prefHeight="16.0" prefWidth="36.0" text="Rate" textFill="#fffefe">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font></Label>
+            <Slider fx:id="ratingSlider" blockIncrement="1.0" layoutX="52.0" layoutY="43.0" max="10.0" min="1.0" prefHeight="37.0" prefWidth="281.0" showTickLabels="true" showTickMarks="true" value="1.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="4.0" layoutY="181.0" prefHeight="145.0" prefWidth="378.0">
+         <children>
+            <Label layoutX="167.0" layoutY="4.0" text="Review" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextArea fx:id="reviewTextArea" layoutY="35.0" prefHeight="94.0" prefWidth="378.0" promptText="Leave a review..." />
+         </children>
+      </Pane>
+      <Button fx:id="doneButton" layoutX="167.0" layoutY="333.0" mnemonicParsing="false" text="Done" />
+   </children>
+</AnchorPane>

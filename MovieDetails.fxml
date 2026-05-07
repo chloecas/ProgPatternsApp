@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="597.0" prefWidth="666.0" style="-fx-background-color: #7A6B9D;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MovieDetailsController">
+   <children>
+      <ImageView fx:id="moviePoster" fitHeight="320.0" fitWidth="231.0" layoutX="29.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="movieTitle" layoutX="237.0" layoutY="18.0" text="Movie Title" textFill="#ede7f6">
+         <font>
+            <Font name="Georgia Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextFlow fx:id="textContainer" layoutX="306.0" layoutY="87.0" lineSpacing="0.5" prefHeight="97.0" prefWidth="340.0" style="-fx-border-color: white;" textAlignment="CENTER">
+         <children>
+            <TextArea fx:id="movieDescription" editable="false" prefHeight="97.0" prefWidth="340.0" style="-fx-font-family: Georgia; -fx-text-fill: #2C2A3E;" wrapText="true" />
+         </children>
+      </TextFlow>
+      <TextFlow fx:id="directorInfo" layoutX="306.0" layoutY="226.0" prefHeight="156.0" prefWidth="340.0" style="-fx-border-color: white;" textAlignment="CENTER">
+         <children>
+            <TextArea fx:id="directorBio" editable="false" prefHeight="155.0" prefWidth="340.0" style="-fx-font-family: Georgia; -fx-text-fill: #2C2A3E;" wrapText="true" />
+         </children>
+      </TextFlow>
+      <Label alignment="CENTER" layoutX="306.0" layoutY="204.0" prefHeight="16.0" prefWidth="340.0" text="%details.director" textFill="#2c2a3e">
+         <font>
+            <Font name="Georgia Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="29.0" layoutY="461.0" lineSpacing="0.5" prefHeight="20.0" prefWidth="250.0" text="%details.ratings" textFill="#2c2a3e" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="ratingsListView" layoutX="29.0" layoutY="481.0" prefHeight="99.0" prefWidth="250.0" style="-fx-background-color: #EDE7F6; -fx-text-fill: #2C2A3E;" />
+      <Label alignment="CENTER" layoutX="304.0" layoutY="414.0" prefHeight="20.0" prefWidth="340.0" text="%details.reviews" textFill="#2c2a3e" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="reviewsListView" layoutX="306.0" layoutY="434.0" prefHeight="146.0" prefWidth="340.0" style="-fx-background-color: #EDE7F6; -fx-text-fill: #2C2A3E;" />
+      <Separator layoutX="276.0" layoutY="72.0" orientation="VERTICAL" prefHeight="320.0" prefWidth="4.0" style="-fx-background-color: #EDE7F6; -fx-border-color: #EDE7F6;" />
+      <Label alignment="CENTER" layoutX="306.0" layoutY="67.0" prefHeight="16.0" prefWidth="340.0" text="%details.description" textFill="#2c2a3e">
+         <font>
+            <Font name="Georgia Bold" size="14.0" />
+         </font>
+      </Label>
+      <Pane fx:id="guestPane" layoutX="23.0" layoutY="399.0" onMouseClicked="#openMenu" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #ede7f6;">
+         <children>
+            <Label layoutX="6.0" layoutY="6.0" prefHeight="38.0" prefWidth="250.0" text="Sign in to rate, review, and add to your watchlist..." wrapText="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Pane fx:id="loggedInPane" prefHeight="50.0" prefWidth="262.0" visible="false">
+               <children>
+                  <Label layoutX="74.0" layoutY="16.0" text="Rate &amp; Review this movie" />
+               </children>
+            </Pane>
+         </children></Pane>
+   </children>
+</AnchorPane>
